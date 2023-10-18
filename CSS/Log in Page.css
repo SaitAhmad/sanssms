@@ -1,0 +1,101 @@
+/*
+Date: 18 Oct 2023
+{ Ahmad Adnan Sait
+    amohammedsait@stu.kau.edu.sa
+    2036577 }
+
+{ Abdullah Saleh AlOawis
+    aabdullahalowais@stu.kau.edu.sa
+    2036620}
+
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    margin-top: 0; /* Remove top margin */
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-right: 10px;
+	order: 2;
+	margin-left: 10px;
+}
+
+.auth-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+	text-decoration: none;
+}
+
+.auth-button:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0056b3;
+}
+
+.header h1 {
+    margin: 0 auto;
+    font-size: 60px;
+}

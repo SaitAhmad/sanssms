@@ -1,0 +1,108 @@
+<!--
+Date: 18 Oct 2023
+{ Ahmad Adnan Sait
+    amohammedsait@stu.kau.edu.sa
+    2036577 }
+
+{ Abdullah Saleh AlOawis
+    aabdullahalowais@stu.kau.edu.sa
+    2036620}
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../CSS/Sign in Page.css"> <!-- Link to an external CSS file for styling -->
+    <title>Sign In Page</title>
+    <style>
+        .signature-box {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Form fields for user input -->
+        <div class="form-group">
+            <label for="firstName">First name:</label>
+            <input type="text" id="firstName" class="input-field">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last name:</label>
+            <input type="text" id="lastName" class="input-field">
+        </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" class="input-field">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" class="input-field">
+        </div>
+        <div class="form-group">
+            <label for="signature">Signature:</label>
+            <canvas id="signatureCanvas" class="signature-box"></canvas>
+            <button id="clearButton"; style="font-size: medium;">Clear</button>
+            <button id="increaseWidthButton"; style="font-size: medium;">+</button>
+            <button id="decreaseWidthButton"; style="font-size: large; padding-bottom: 0.00001% ;padding-top: 0.00001%">-</button>
+        </div>
+        <!-- Sign-in button to navigate to the home page -->
+        <a href="Home Page.html" class="auth-button">Sign in</a>
+    </div>
+
+    <script>
+        // Get the signature canvas and buttons
+        const canvas = document.getElementById('signatureCanvas');
+        const clearButton = document.getElementById('clearButton');
+        const increaseWidthButton = document.getElementById('increaseWidthButton');
+        const decreaseWidthButton = document.getElementById('decreaseWidthButton');
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+
+        // Set up the canvas
+        canvas.width = 300;
+        canvas.height = 100;
+        ctx.lineCap = 'round';
+        ctx.strokeStyle = '#000';
+        let brushWidth = 2; // Initial brush width
+
+        // Function to handle drawing on the canvas
+        function draw(e) {
+            if (!drawing) return;
+
+            ctx.lineWidth = brushWidth;
+            ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+        }
+
+        // Event listeners
+        canvas.addEventListener('mousedown', () => {
+            drawing = true;
+        });
+        canvas.addEventListener('mouseup', () => {
+            drawing = false;
+            ctx.beginPath();
+        });
+        canvas.addEventListener('mousemove', draw);
+
+        clearButton.addEventListener('click', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+
+        increaseWidthButton.addEventListener('click', () => {
+            brushWidth += 1; // Increase brush width by 1 pixels
+        });
+
+        decreaseWidthButton.addEventListener('click', () => {
+            if (brushWidth > 1) {
+                brushWidth -= 1; // Decrease brush width by 1 pixels, minimum width is 1 pixels
+            }
+        });
+    </script>
+</body>
+
+</html>

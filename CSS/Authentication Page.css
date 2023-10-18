@@ -1,0 +1,62 @@
+/*
+Date: 18 Oct 2023
+{ Ahmad Adnan Sait
+    amohammedsait@stu.kau.edu.sa
+    2036577 }
+
+{ Abdullah Saleh AlOawis
+    aabdullahalowais@stu.kau.edu.sa
+    2036620}
+
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    width: 100%; /* Set header to full width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
+
+.logo {
+    width: 100%; /* Make the image take full width of the header */
+    max-width: 200px; /* Set maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+}
+
+.auth-form {
+    margin-top: 200px;
+}
+
+.auth-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Adjust padding to make the buttons bigger */
+    margin: 60px;
+    border-radius: 8px; /* Make the button edges more rounded */
+    cursor: pointer;
+    font-size: 18px; /* Increase font size for the buttons */
+	text-decoration: none;
+}
+
+.auth-button:hover {
+    background-color: #0056b3;
+}
+
+.header h1 {
+    margin: 0 auto; /* Center the h1 element */
+    font-size: 60px;
+}
