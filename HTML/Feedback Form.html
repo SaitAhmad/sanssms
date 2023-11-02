@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="../CSS/CSS Design.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="../images/SANS.png" alt="SANS Logo" class="logo">
+            <h1>Feedback Form</h1>
+        </div>
+    </div>
+	<div class ="feedback-form-container">
+		<div class="feedback-form">
+			<h2>Leave Your Information and Feedback</h2>
+			<form>
+				 <fieldset>
+            <legend> Personal Information </legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label>Are you single?</label>
+            <input type="radio" id="singleYes" name="singleStatus" value="Yes">
+            <label for="singleYes">Yes</label>
+            <input type="radio" id="singleNo" name="singleStatus" value="No">
+            <label for="singleNo">No</label><br>
+
+            <label for="city">Select your city:</label>
+            <select id="city" name="city">
+                <option value="New York">Jeddah</option>
+				<option value="Houston">Makkah</option>
+                <option value="Other">Madinah</option>
+                <option value="Los Angeles">Riyadh</option>
+                <option value="Chicago">Dahran</option>
+
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend> Safety Measures at Home </legend>
+            <label>
+                <input type="checkbox" name="safetyMeasure" value="FireExtinguisher"> Fire Extinguisher
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="safetyMeasure" value="SmokeDetector"> Smoke Detector
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="safetyMeasure" value="FirstAidKit"> First Aid Kit
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="safetyMeasure" value="SecuritySystem"> Security System
+            </label><br>
+        </fieldset>
+		<button type="submit">Submit Feedback</button>
+			</form>
+		</div>
+	<!-- Sign-in button to navigate to the home page -->
+    <a href="Home Page.html" class="auth-button">Home page</a>
+	</div>
+
+
+
+</body>
+
+</html>
