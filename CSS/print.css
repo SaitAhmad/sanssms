@@ -1,0 +1,20 @@
+/* apply styles only when printing */
+@media print {
+    /* hide all elements except for tables */
+    body * {
+        display: none;
+    }
+    
+    /* display tables with captions */
+    table {
+        display: table;
+    }
+
+    /* add captions to tables using CSS generated content */
+    table:after {
+        content: attr(caption); /* use the 'caption' attribute as content */
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+}
